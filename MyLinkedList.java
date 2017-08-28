@@ -49,7 +49,7 @@ public class MyLinkedList {
 		public Node searchForNodeWithValue(String val){
 			Node temp = head;
 			while(temp != null){
-				if(temp.data == val) return temp;
+				if(temp.data.equals(val)) return temp;
 				temp = temp.next;
 			}
 			return new Node("");
