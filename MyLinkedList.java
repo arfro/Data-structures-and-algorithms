@@ -1,25 +1,23 @@
-package queue;
-
 public class MyLinkedList {
 
-	private Node head;
-	
-	public MyLinkedList(){
-		head = null;
-	}
+		private Node head;
+		
+		public MyLinkedList(){
+			head = null;
+		}
 	
 	//insert first
-	public void insertToFront(Node newNode){
-		if(head == null){
-			head = newNode;
-			head.next = null;
+		public void insertToFront(Node newNode){
+			if(head == null){
+				head = newNode;
+				head.next = null;
+			}
+			else{
+				newNode.next = head;
+				head = newNode;
+			}
 		}
-		else{
-			newNode.next = head;
-			head = newNode;
-		}
-	}
-	
+		
 	//insert last
 		public void insertToEnd(Node newNode){
 			if(head == null){
@@ -56,7 +54,7 @@ public class MyLinkedList {
 			}
 		}
 
-		//toString
+	//toString
 		public String toString(){
 			StringBuilder result = new StringBuilder();
 			Node temp = head;

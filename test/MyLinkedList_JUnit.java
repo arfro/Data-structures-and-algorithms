@@ -8,8 +8,7 @@ public class MyLinkedList_JUnit {
       MyLinkedList list = new MyLinkedList();
       list.insertToEnd(new Node("last"));
       list.insertToFront(new Node("first"));
-      assertEquals("first last", list;)
+      assertEquals("first last", list);
     }
-    
 
 }
