@@ -1,3 +1,5 @@
+package queue;
+
 public class MyLinkedList {
 
 	private Node head;
@@ -54,6 +56,19 @@ public class MyLinkedList {
 			}
 		}
 
+		//toString
+		public String toString(){
+			StringBuilder result = new StringBuilder();
+			Node temp = head;
+			while(temp != null){
+				result.append(temp.data);
+				if(temp.next != null) result.append(" ");
+				temp = temp.next;
+			}
+			
+			return result.toString();
+			
+		}
 		
 		public static void main(String[] arg){
 			MyLinkedList list = new MyLinkedList();
@@ -61,7 +76,7 @@ public class MyLinkedList {
 			list.insertToFront(new Node("0"));
 			list.insertToEnd(new Node("2"));
 			list.insertToFront(new Node("-1"));
-			list.print();
+			System.out.println(list);
 		}
 	
 }
