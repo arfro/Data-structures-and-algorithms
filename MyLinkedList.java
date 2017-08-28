@@ -45,6 +45,16 @@ public class MyLinkedList {
 			temp.next = helper.next;
 		}
 		
+	//search for value
+		public Node searchForNodeWithValue(String val){
+			Node temp = head;
+			while(temp != null){
+				if(temp.data == val) return temp;
+				temp = temp.next;
+			}
+			return new Node("");
+		}
+		
 	//print
 		public void print(){
 			Node temp = head;
@@ -75,6 +85,7 @@ public class MyLinkedList {
 			list.insertToEnd(new Node("2"));
 			list.insertToFront(new Node("-1"));
 			System.out.println(list);
+			System.out.print(list.searchForNodeWithValue("2"));
 		}
 	
 }
@@ -86,6 +97,10 @@ class Node{
 	
 	public Node(String data){
 		this.data = data;
+	}
+	
+	public String toString(){
+		return data;
 	}
 	
 }
