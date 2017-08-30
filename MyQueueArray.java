@@ -6,7 +6,6 @@ public class MyQueueArray {
 	
 	//constructor
 	public MyQueueArray(int size){
-		if(size > Integer.MAX_VALUE) queue = new int[Integer.MAX_VALUE];
 		else if(size < 0) queue = new int[0];
 		else queue = new int[size];
 	}
@@ -68,5 +67,10 @@ public class MyQueueArray {
 				if(i != 0)result.append(i);
 		return result.toString();
 	}		
+	
+	//getSize
+	public int getSize(){
+		return queue.length;
+	}
 	
 }
