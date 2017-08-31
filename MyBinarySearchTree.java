@@ -113,16 +113,6 @@ public class MyBinarySearchTree {
 		return node == root;
 	}
 
-	public static void main(String[] as){
-		MyBinarySearchTree tree = new MyBinarySearchTree();
-		
-		tree.insert(10);
-		tree.insert(-12);
-		tree.insert(30);
-		tree.insert(20);
-		System.out.println(tree.search(1));
-		
-	}
 }
 
 class Node{
