@@ -89,10 +89,40 @@ public class MyBinarySearchTree {
 		return false;
 	}
 	
+	//search
+	private Node search(int value){
+		return search(root, value);
+	}
+	
+	
+	//search - overloaded
+	private Node search(Node node, int searchValue){
+			if(node != null){
+				if(node.getData() == searchValue) return node;
+				if(node.getData() > searchValue){
+					return search(node.getLeft(), searchValue);
+				}
+				if(node.getData() < searchValue){
+					return search(node.getRight(), searchValue);
+				}
+			}
+			return new Node(-1);
+		}
+	
 	public boolean isRoot(Node node){
 		return node == root;
 	}
+
+	public static void main(String[] as){
+		MyBinarySearchTree tree = new MyBinarySearchTree();
 		
+		tree.insert(10);
+		tree.insert(-12);
+		tree.insert(30);
+		tree.insert(20);
+		System.out.println(tree.search(1));
+		
+	}
 }
 
 class Node{
@@ -122,6 +152,7 @@ class Node{
 	}
 	
 	public Node getParent(){
+		if(parent == null) return new Node(-1);
 		return parent;
 	}
 	
