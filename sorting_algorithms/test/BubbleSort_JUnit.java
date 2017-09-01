@@ -10,5 +10,21 @@ public class BubbleSort_JUnit {
 		array = bubbleSort(array);
 		assertArrayEquals(expectedArray, array);
     }
+    
+    @Test
+    public void BubbleSort_test_empty() {
+    	int[] array = new int[] {};
+    	int[] expectedArray = new int[] {};
+		array = bubbleSort(array);
+		assertArrayEquals(expectedArray, array);
+    }
+    
+    @Test
+    public void BubbleSort_test_OneElement()) {
+    	int[] array = new int[] {4};
+    	int[] expectedArray = new int[] {4};
+		array = bubbleSort(array);
+		assertArrayEquals(expectedArray, array);
+    }
  
 }
