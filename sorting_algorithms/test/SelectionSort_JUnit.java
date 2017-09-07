@@ -18,7 +18,7 @@ public class SelectionSort_JUnit{
 	}
 	
 	@Test
-	public void SelectionSort_sort_NoElements(){
+	public void SelectionSort_sort_OneElement(){
 		int[] array = new int[1];
 		SelectionSort.fillArray(array);
 		assertEquals(array, SelectionSort.selectionsort(array));
