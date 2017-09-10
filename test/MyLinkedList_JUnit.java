@@ -10,5 +10,17 @@ public class MyLinkedList_JUnit {
       list.insertToFront(new Node("first"));
       assertEquals("first last", list);
     }
+	
+	 @Test
+    public void positive_revertFiveElements() {
+      MyLinkedList list = new MyLinkedList();
+      list.insertToFront(new Node("1"));
+      list.insertToFront(new Node("2"));
+      list.insertToFront(new Node("3"));
+      list.insertToFront(new Node("6"));
+      list.insertToFront(new Node("8"));
+	  list.revert();
+      assertEquals("8 6 3 2 1", list);
+    }
 
 }

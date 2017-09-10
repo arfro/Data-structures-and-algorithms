@@ -97,7 +97,6 @@ public class MyLinkedList {
 			//p1 after the while loop will be set to the last element. make it head
 			head = p1;
 		}
- 
 	
 }
 
