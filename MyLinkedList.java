@@ -77,16 +77,27 @@ public class MyLinkedList {
 			return result.toString();
 			
 		}
-		
-		public static void main(String[] arg){
-			MyLinkedList list = new MyLinkedList();
-			list.insertToFront(new Node("1"));
-			list.insertToFront(new Node("0"));
-			list.insertToEnd(new Node("2"));
-			list.insertToFront(new Node("-1"));
-			System.out.println(list);
-			System.out.print(list.searchForNodeWithValue("2"));
+	
+		public void revert(){
+			//if list has only one element or is empty, return
+			if(head==null||head.next==null) return;
+			
+			Node p1 = head;
+			Node p2 = p1.next;
+			//head will be the last element of the list after reverse and so should point to null
+			head.next = null;
+			
+			while(p1 != null && p2 != null){
+				//while not last element change p2.next to point to p1 instead of the current next
+				Node temp = p2.next;
+				p2.next = p1;
+				p1 = p2;
+				p2 = temp;
+			}
+			//p1 after the while loop will be set to the last element. make it head
+			head = p1;
 		}
+ 
 	
 }
 
